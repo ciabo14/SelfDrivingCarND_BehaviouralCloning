@@ -15,11 +15,11 @@ Track #1, from where the images comes from, has a prevalency of left corner. Thi
 
 Moreover, the dataset appear unbalanced also from distribution of the steering angles: 
 
-1. The number of examples with 0 steering angle are is huge respect to the != 0 angles. 
+* The number of examples with 0 steering angle are is huge respect to the != 0 angles. 
 
 ![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_CenterOnly.png)
 
-2. The number of examples of steering angle decrease with the increase of the steering angle itself (both for positive and negative angles)
+* The number of examples of steering angle decrease with the increase of the steering angle itself (both for positive and negative angles)
 
 ![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_laetralOnly.png)
 
