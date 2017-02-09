@@ -18,6 +18,8 @@ Moreover, the dataset appear unbalanced also from distribution of the steering a
 1. The number of examples with 0 steering angle are is huge respect to the != 0 angles. 
 2. The number of examples of steering angle decrease with the increase of the steering angle itself (both for positive and negative angles)
 
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_CenterOnly.png)
+
 This behaviour was expected since the majority of the track is straight and because the normal behaviour is to drive straight avoiding strong turn (using small steering values for more time)
 
 # Image Preprocessing and data Augmentation
