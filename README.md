@@ -31,7 +31,7 @@ This behaviour was expected since the majority of the track is straight and beca
 For the purposes of the project I decided to start from the dataset provided by Udacity. I considered the 8036 pictures for each camera sufficient for the training/validation/test. 
 First step to complete this project was *data analysis* and *data augmentation*. In order to balance the values of steering in the dataset, I flipped all the images along y axis (from all the cameras) recomputing the steering angle accordingly (*-1). 
 
-![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_lateralOnly_withleftrightCameras_flipped.png)
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_laetralOnly_flipped.png)
 
 Therefore steering angles for images coming from the lateral cameras were computed in order to teach the model how to "recover" the car position away from the center of the road. To accomplish this goal perfectly, information about geometry of the scene would have been required. Since nor car quotes neither distance between the cameras was known, some tests with different valus of steering angle were done.
 1. A fixed value of steering angle offset was used and added to the images; The offset was fixed to 0.25
