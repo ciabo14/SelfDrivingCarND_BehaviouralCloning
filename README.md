@@ -25,7 +25,7 @@ Moreover, the dataset appear unbalanced also from distribution of the steering a
 
 This behaviour was expected since the majority of the track is straight and because the normal behaviour is to drive straight avoiding strong turn (using small steering values for more time)
 
-# Image Preprocessing and data Augmentation
+## Image Preprocessing and data Augmentation
 
 
 For the purposes of the project I decided to start from the dataset provided by Udacity. I considered the 8036 pictures for each camera sufficient for the training/validation/test. 
@@ -48,7 +48,7 @@ As immediatly appears, the # of examples with zero steering angles are the major
 This bring me to a steering angle distribution like the followings:
 
 
-# Model Definition and image processing
+## Model Definition and image processing
 
 The model was inspired from the Nvidia CNN suggested. A series of 5 convolutional layers followed by three fully connected layer. First three convolutional layers were desined to apply 5x5 filters with a pooling of size (2,2), while the last two decrese the filter size to 3x3 with stride (1x1).
 
@@ -58,7 +58,7 @@ Before to provide the training samples to the network, images were resized and n
 
 In order to prevent from overfitting, also dropout layers were added after all the layers (convolutional and fully connected). The dropout probability was fixed to 0.25 after some tests. 
 
-# Model Training 
+## Model Training 
 
 Finally, before the training procedure, the dataset was split in 3 sets: 
 1. training set = 70% of the total dataset; 
@@ -72,14 +72,14 @@ Adam optimizer was used together with the mean_squared_Error loss function. For 
 Batch size was fixed to 256 (value that fit the memory of my laptop without decreasing of performances).
 5 Epochs were used for optimization puposes, even if at the 3 one the algorithm already converges.
 
-# Parallel tests	
+## Parallel tests	
 
 In parallel to all the verification described above, I tryed the same identical model without Dropout layers. 
 The results reached were not so bad in general. However the system shows some problems in some of most critical points of the track. In particular the corner after the bridge.
 
 Furthermore, some other tests with different Dropout probabilities were done. Increasing dropout probability shows good performaces of the system only after many epochs with an increase in performances no so high. So, the original value of .25 was used
 
-# Interesting Optimization for future
+## Interesting Optimization for future
 
 Unfortunately timings requirements does not let me to test some different solutions. However I would like to place the attention (and asking for some suggestions) about what could be very useful for these systems.
 
@@ -88,3 +88,8 @@ Unfortunately timings requirements does not let me to test some different soluti
 ### 2- Googlenet approach with inception module
 
 ### 3- RNN
+
+# Conclusions
+
+From this project I learnt the imporance of Data. Unbalanced or scarse or not processed dataset brings even the best model ever to not perform well in a specific case. 
+Once the model is defined, data processing is the core point in a DNN project like this.  
