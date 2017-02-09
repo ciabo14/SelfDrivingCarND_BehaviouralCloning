@@ -35,7 +35,7 @@ First step to complete this project was *data analysis* and *data augmentation*.
 
 Therefore steering angles for images coming from the lateral cameras were computed in order to teach the model how to "recover" the car position away from the center of the road. To accomplish this goal perfectly, information about geometry of the scene would have been required. Since nor car quotes neither distance between the cameras was known, some tests with different valus of steering angle were done.
 1. A fixed value of steering angle offset was used and added to the images; The offset was fixed to 0.25
-![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_lateralOnly_withleftrightCameras_flipped.png)
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/figure_WithOffsetOnly.png)
 2. A value sampled from a gaussian distribution was used as offset for the lateral cameras. Two different values for mean and variance were tested: (.25,.1) and (.3,.15). The first couple appears the best
 
 ![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/figure_WithOffsetGAUSSIAN.png)
