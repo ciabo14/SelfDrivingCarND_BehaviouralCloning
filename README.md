@@ -1,3 +1,25 @@
+# Self Driving Car NanoDegree - Udacity
+# Project 3 - Behavioural cloning
+
+## Overview
+
+The goal for this third project for the nanodegree is to model a Deep Neural Network able to clone the human behaviour in driving along a track. In this particular scenario, the behaviour to clone comes from a simulator.
+The dataset used for this project does not come from the simulation in the simulator, but the provided dataset was used. 
+The model was first trained with a part of this dataset (training set), and then tested in the "autonomous" function of the simulator.
+
+## Preliminare data analisys
+
+The dataset provided by udacity is made of 8036 per camera coming from the first of the two tracks of the simulator. This number of examples was considered sufficient as starting number for the purposes of this project.
+
+Track #1, from where the images comes from, has a prevalency of left corner. This bring the dataset to appears unbalanced from positive and necative steering angle (right and left steering angles rispectively). 
+
+Moreover, the dataset appear unbalanced also from distribution of the steering angles: 
+
+1- The number of examples with 0 steering angle are is huge respect to the != 0 angles. 
+2- The number of examples of steering angle decrease with the increase of the steering angle itself (both for positive and negative angles)
+
+This behaviour was expected since the majority of the track is straight and because the normal behaviour is to drive straight avoiding strong turn (using small steering values for more time)
+
 # Image Preprocessing and data Augmentation
 
 For the purposes of the project I decided to start from the dataset provided by Udacity. I considered the 8036 pictures for each camera sufficient for the training/validation/test. 
