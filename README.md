@@ -16,6 +16,9 @@ Track #1, from where the images comes from, has a prevalency of left corner. Thi
 Moreover, the dataset appear unbalanced also from distribution of the steering angles: 
 
 1. The number of examples with 0 steering angle are is huge respect to the != 0 angles. 
+
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_CenterOnly.png)
+
 2. The number of examples of steering angle decrease with the increase of the steering angle itself (both for positive and negative angles)
 
 ![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_laetralOnly.png)
@@ -28,9 +31,14 @@ This behaviour was expected since the majority of the track is straight and beca
 For the purposes of the project I decided to start from the dataset provided by Udacity. I considered the 8036 pictures for each camera sufficient for the training/validation/test. 
 First step to complete this project was *data analysis* and *data augmentation*. In order to balance the values of steering in the dataset, I flipped all the images along y axis (from all the cameras) recomputing the steering angle accordingly (*-1). 
 
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_lateralOnly_withleftrightCameras.png)
+
 Therefore steering angles for images coming from the lateral cameras were computed in order to teach the model how to "recover" the car position away from the center of the road. To accomplish this goal perfectly, information about geometry of the scene would have been required. Since nor car quotes neither distance between the cameras was known, some tests with different valus of steering angle were done.
 1. A fixed value of steering angle offset was used and added to the images; The offset was fixed to 0.25
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_lateralOnly_withleftrightCameras_flipped.png)
 2. A value sampled from a gaussian distribution was used as offset for the lateral cameras. Two different values for mean and variance were tested: (.25,.1) and (.3,.15). The first couple appears the best
+
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/figure_WithOffsetGAUSSIAN.png)
 
 The main difference between the wto solutions is the output steering angle distribution. While in the first case the distribution appear simmetric, in the second case it is not; while in the second one appears more *smooth*, the first one shows some more peaks in the distribution. Figures below show the distributions of steering angles as described.  
 
