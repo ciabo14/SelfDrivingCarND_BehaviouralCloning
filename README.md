@@ -11,14 +11,14 @@ The model was first trained with a part of this dataset (training set), and then
 
 The dataset provided by udacity is made of 8036 per camera coming from the first of the two tracks of the simulator. 
 
-Track #1, from where the images comes from, has a prevalency of left corner. This bring the dataset to appears unbalanced from positive and necative steering angle (right and left steering angles rispectively). 
+Track #1, from where the images comes from, has a prevalency of left corner. This could bring the dataset to be unbalanced from positive and negative steering angle (right and left steering angles rispectively).  
 
 Moreover, the dataset appear unbalanced also from distribution of the steering angles: 
 
 1. The number of examples with 0 steering angle are is huge respect to the != 0 angles. 
 2. The number of examples of steering angle decrease with the increase of the steering angle itself (both for positive and negative angles)
 
-![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_CenterOnly.png)
+![alt tag](https://github.com/ciabo14/SelfDrivingCarND_BehaviouralCloning/blob/master/Dataset_laetralOnly.png)
 
 This behaviour was expected since the majority of the track is straight and because the normal behaviour is to drive straight avoiding strong turn (using small steering values for more time)
 
